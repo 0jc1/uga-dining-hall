@@ -1,0 +1,31 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dining Hall Capacity</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script>
+
+</head>
+<body>
+    <h1>Dining Hall Capacity</h1>
+
+    <label for="diningHallSelect">Select Dining Hall:</label>
+    <select id="diningHallSelect"></select>
+
+    <label for="startTime">Start Time:</label>
+    <input type="datetime-local" id="startTime" name="startTime">
+
+    <label for="endTime">End Time:</label>
+    <input type="datetime-local" id="endTime" name="endTime">
+
+    <div id="status"></div>
+    <br>
+
+    <canvas id="capacityChart" width="600" height="400"></canvas>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
