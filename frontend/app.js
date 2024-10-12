@@ -1,6 +1,6 @@
 // public/app.js
 
-let URI = "https://uga-dining-hall.onrender.com:8000";
+let URI = "https://uga-dining-hall.onrender.com";
 
 document.addEventListener('DOMContentLoaded', () => {
     const diningHalls = ['Bolton', 'The Village Summit', 'Oglethorpe', 'Snelling', 'The Niche'];
