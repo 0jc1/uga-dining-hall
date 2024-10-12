@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctx = document.getElementById('capacityChart').getContext('2d');
     let capacityChart;
 
-    // Populate dining hall dropdown
     diningHalls.forEach((hall) => {
         const option = document.createElement('option');
         option.value = hall;
@@ -27,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!datePart) {
             return undefined;
         }
-        // Parse the date part
         const [year, month, day] = datePart.split('-').map(Number);
     
         // Default time to midnight if time part is missing
@@ -71,6 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Parsed Start Time:', startTime);
             console.log('Parsed End Time:', endTime);
 
+            if (startTime > endTime) {
+                statusDiv.textContent = "Error. Start time must come before the end time."
+                if (capacityChart) {
+                    capacityChart.destroy();
+                }
+                return;
+            }
+
             // Build query parameters with correctly formatted dates
             const params = new URLSearchParams();
             if (startTime) {
@@ -99,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 return;
             }
+
 
             // Convert timestamps to Date objects for the labels
             const labels = data.map((item) => new Date(item.timestamp));

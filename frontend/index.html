@@ -3,28 +3,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dining Hall Capacity</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/moment"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script>
-
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Dining Hall Capacity</h1>
 
-    <label for="diningHallSelect">Select Dining Hall:</label>
-    <select id="diningHallSelect"></select>
+    <form>
+        <label for="diningHallSelect">Select Dining Hall:
+            <select id="diningHallSelect"></select>
+        </label>
 
-    <label for="startTime">Start Time:</label>
-    <input type="date" id="startTime" name="startTime">
+        <label for="startTime">Start Time:
+            <input type="date" id="startTime" name="startTime">
+        </label>
 
-    <label for="endTime">End Time:</label>
-    <input type="date" id="endTime" name="endTime">
+        <label for="endTime">End Time:
+            <input type="date" id="endTime" name="endTime">
+        </label>
+    </form>
 
-    <div id="status"></div>
-    <br>
+    <div id="status">Loading data...</div>
 
-    <canvas id="capacityChart" width="600" height="400"></canvas>
+    <canvas id="capacityChart" width="700" height="500"></canvas>
 
     <script type="module" src="app.js"></script>
 </body>
