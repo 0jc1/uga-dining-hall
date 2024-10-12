@@ -63,10 +63,9 @@ async function getData() {
   }
 }
 
-// Fetch data every 5 minutes
 setInterval(() => {
   getData();
-}, 5* 60 * 1000);  // Fetch data every 5 minutes
+}, 2* 60 * 1000);  // Fetch data every 2 minutes
 
 // Fetch data once when the server starts
 getData();
