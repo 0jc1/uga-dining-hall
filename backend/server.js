@@ -93,7 +93,7 @@ app.get('/api/capacity/:hall', (req, res) => {
     query += ` AND timestamp <= ?`;
     params.push(endTime);
   } else {
-    query += `TOP 100`
+    query += ` TOP 100`
   }
 
   db.all(query, params, (err, rows) => {
