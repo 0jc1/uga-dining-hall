@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             type: 'time',
                             time: {
                                 unit: 'day',
-                                tooltipFormat: 'MMM D, YYYY, h:mm a',
+                                tooltipFormat: 'EEE, MMM D, YYYY, h:mm a',
                                 displayFormats: {
                                     'millisecond': 'MMM DD',
                                     'second': 'MMM DD',
