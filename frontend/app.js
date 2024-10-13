@@ -106,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-
             // Convert timestamps to Date objects for the labels
             const labels = data.map((item) => new Date(item.timestamp));
             const capacities = data.map((item) => item.availability);
@@ -141,9 +140,22 @@ document.addEventListener('DOMContentLoaded', () => {
                         x: {
                             type: 'time',
                             time: {
-                                unit: 'minute',
-                                tooltipFormat: 'MMM D, YYYY, h:mm:ss a',
+                                unit: 'day',
+                                tooltipFormat: 'MMM D, YYYY, h:mm a',
+                                displayFormats: {
+                                    'millisecond': 'MMM DD',
+                                    'second': 'MMM DD',
+                                    'minute': 'MMM DD',
+                                    'hour': 'MMM DD',
+                                    'day': 'MMM DD',
+                                    'week': 'MMM DD',
+                                    'month': 'MMM DD',
+                                    'quarter': 'MMM DD',
+                                    'year': 'MMM DD',
+                                 }
+                                 
                             },
+                            gridLines: { display: false },
                             title: { display: true, text: 'Time' },
                             min: startTime ? startTime.getTime() : undefined,
                             max: endTime ? endTime.getTime() : undefined,
