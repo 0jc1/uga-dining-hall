@@ -54,8 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const startTimeValue = startTimeInput.value;
         const endTimeValue = endTimeInput.value
 
-        console.log(startTimeValue)
-
         try {
             // Parse input values into Date objects using the custom parser
             let startTime, endTime;
@@ -92,8 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (paramsString) {
                 url += `?${paramsString}`;
             }
-
-            console.log('Request URL:', url);
 
             const response = await fetch(url);
             const data = await response.json();
@@ -142,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             type: 'time',
                             time: {
                                 unit: 'day',
-                                tooltipFormat: 'EEE, MMM D, YYYY, h:mm a',
+                                tooltipFormat: 'EEEE, MMM D, YYYY, h:mm a',
                                 displayFormats: {
                                     'millisecond': 'MMM DD',
                                     'second': 'MMM DD',
