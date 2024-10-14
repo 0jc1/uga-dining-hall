@@ -1,3 +1,4 @@
+
 let URI = "https://uga-dining-hall.onrender.com";
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -174,7 +175,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Event listeners
     diningHallSelect.addEventListener('change', updateChart);
     startTimeInput.addEventListener('input', () => {
         console.log('Start time input changed');
@@ -185,6 +185,5 @@ document.addEventListener('DOMContentLoaded', () => {
         updateChart();
     });
 
-    // Initial chart load
     updateChart();
 });
