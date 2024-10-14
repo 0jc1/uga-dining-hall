@@ -177,11 +177,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     diningHallSelect.addEventListener('change', updateChart);
     startTimeInput.addEventListener('input', () => {
-        console.log('Start time input changed');
         updateChart();
     });
     endTimeInput.addEventListener('input', () => {
-        console.log('End time input changed');
         updateChart();
     });
 
